@@ -1,5 +1,6 @@
 #include <future>
 #include <type_traits>
+
 template<typename F,typename A>
 typename std::future<std::result_of<F(A&&)>>::type
 spawn_task(F&& f,A&& a)
